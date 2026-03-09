@@ -48,10 +48,10 @@ export function BuildingSchematic({ stats, allTimestamps }: Props) {
             frequently available
           </span>
         </div>
-        <div className="space-y-1">
+        <div className="flex flex-col gap-3">
           {byFloor.map(([floor, floorApts]) => (
-            <div key={floor} className="flex items-center gap-1">
-              <span className="w-8 text-right text-xs text-gray-500 shrink-0">{floor}</span>
+            <div key={floor} className="flex items-start gap-1 border-t border-gray-700 pt-2">
+              <span className="w-8 text-right text-xs text-gray-500 shrink-0 mt-1">{floor}</span>
               <div className="flex gap-1 flex-wrap">
                 {floorApts.map((s) => (
                   <ApartmentCell
